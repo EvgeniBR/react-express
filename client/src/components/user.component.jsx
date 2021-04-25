@@ -1,25 +1,25 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import logo from '../logo.svg';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 function User() {
-  const [user, setUser] = useState(null)
+//   const [user, setUser] = useState(null)
 
-  const getUser = async () =>{
-    const data = await axios.get('api/getUser')
-    setUser(data.data)
-  }
+//   const getUser = async () =>{
+//     const data = await axios.get('api/getUser')
+//     setUser(data.data)
+//   }
 
-  useEffect(() => {
-    getUser()
-  }, [])
+//   useEffect(() => {
+//     getUser()
+//   }, [])
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {`Hello ${user}`}
+          {`Hello a`}
         </p>
         <a
           className="App-link"
