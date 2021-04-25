@@ -10,7 +10,7 @@ app.get('/api/getUser', (req,res)=>{
 
 const port = 8000;
 app.get('/', (request, response) => {
-    response.send(path.join(__dirname,"/client/public/index.html"))
+    response.sendFile(path.join(__dirname,"/client/public/index.html"))
   }).listen(process.env.PORT || port , () =>{
     console.log(`Server started on port ${port}`)
 });
