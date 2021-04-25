@@ -8,12 +8,9 @@ app.get('/api/getUser', (req,res)=>{
     res.json(user);
 })
 
-app.get("/", function(req, res) {
-    //Route actions
- });
- 
-
 const port = 8000;
-app.listen(process.env.PORT || port , () =>{
+app.get('/', (request, response) => {
+    response.send(path.join(__dirname,"/client/public/index.html"))
+  }).listen(process.env.PORT || port , () =>{
     console.log(`Server started on port ${port}`)
 });
