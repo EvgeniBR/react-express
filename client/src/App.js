@@ -1,35 +1,17 @@
-import React, {useEffect, useState} from 'react'
-import logo from './logo.svg';
-import axios from 'axios';
+import React from 'react'
 import './App.css';
+import { Route } from 'react-router';
+import User from './components/user.component';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  const [user, setUser] = useState(null)
 
-  const getUser = async () =>{
-    const data = await axios.get('api/getUser')
-    setUser(data.data)
-  }
-
-  useEffect(() => {
-    getUser()
-  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {`Hello ${user}`}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Route exact path='/' component={User} />
+      </BrowserRouter>
+
     </div>
   );
 }

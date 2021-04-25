@@ -9,9 +9,6 @@ app.get('/api/getUser', (req,res)=>{
 
 const port = 8000;
 
-app.get('/', (request, response) => {
-    const result = 'App is running';
-    response.send(result);
-  }).listen(process.env.PORT || port , () =>{
+app.listen(process.env.PORT || port , () =>{
     console.log(`Server started on port ${port}`)
 });
