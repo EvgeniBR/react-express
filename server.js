@@ -8,6 +8,11 @@ app.get('/api/getUser', (req,res)=>{
     res.json(user);
 })
 
+app.get("/", function(req, res) {
+    //Route actions
+ });
+ 
+
 const port = 8000;
 app.listen(process.env.PORT || port , () =>{
     console.log(`Server started on port ${port}`)
