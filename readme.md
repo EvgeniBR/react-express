@@ -1,6 +1,6 @@
-# express and react boilerplate project'!'
+# express and react boilerplate!
 
-## after cloning the project type in the console':'
+## after cloning the project type in the console:
 
 ### •npm install
 
