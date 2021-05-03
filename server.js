@@ -2,18 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
+const os = require('os');
 app.use(cors());
-app.get('/api/getUser', (req,res)=>{
-    const user = 'Evgeni';
-    res.json(user);
-})
-
 const port = 8000;
+
+app.get('/api/getUser', (req, res) => res.send({ username: os.userInfo().username }));
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
     app.use(express.static('client/build'));
-  
     // Express serve up index.html file if it doesn't recognize route
     const path = require('path');
     app.get('*', (req, res) => {
